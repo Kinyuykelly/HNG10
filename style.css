@@ -1,0 +1,33 @@
+img[data-testid="slackDisplayImage"] {
+    height: 30vh;
+    width: 20vw;
+    border-radius: 8px;
+}
+
+.container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+a {
+    font-weight: bold;
+    color: #1034a6;
+    text-decoration: none;
+
+}
+a:hover {
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 13px 15px;
+    background: #1034a6;
+}
+@media(max-width: 858px){
+    img[data-testid="slackDisplayImage"]{
+        height: 20vh;
+        width: 15vw;
+    }
+}

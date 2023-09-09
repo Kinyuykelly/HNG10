@@ -5,58 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task1</title>
-    <style>
-        img[data-testid="slackDisplayImage"] {
-            height: 30vh;
-            width: 20vw;
-            border-radius: 50%;
-        }
-
-        .container {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        a {
-            font-weight: bold;
-            color: #1034a6;
-            text-decoration: none;
-
-        }
-        a:hover {
-            color: #ffffff;
-            border-radius: 4px;
-            padding: 13px 15px;
-            background: #1034a6;
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            function displayCurrentDay() {
-                var currentDate = new Date().toLocaleDateString('en-EN', { weekday: 'long' });
-                var element = document.querySelector('[ data-testid="currentDayOfTheWeek" ]');
-                element.textContent = currentDate;
-            }
-            displayCurrentDay();
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            function displayCurrentTime() {
-                var day = new Date();
-                const hours = day.getHours();
-                const minutes = day.getMinutes();
-                const seconds = day.getSeconds();
-                const milliseconds = day.getMilliseconds();
-                const currentTime = `${hours}h : ${minutes}min : ${seconds}s : ${milliseconds}ms(UTC)`;
-                var time = document.querySelector('[data-testid="currentUTCTime"]');
-                time.textContent = currentTime;
-            }
-            displayCurrentTime();
-        });
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -67,5 +16,6 @@
         <p data-testid="currentUTCTime"></p>
         <a href="https://github.com/Kinyuykelly/HNG10.git" data-testid="githubURL">Repository Link</a>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
